@@ -1,0 +1,12 @@
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+# Sample text
+text = "He loves running in the park with his dogs."
+
+# Perform morphological analysis (lemmatization)
+lemmatized_tokens = [WordNetLemmatizer().lemmatize(token) for token in word_tokenize(text)]
+
+# Print the original tokens and their lemmatized forms
+for original, lemmatized in zip(word_tokenize(text), lemmatized_tokens):
+    print(f"Original: {original} --> Lemmatized: {lemmatized}")
